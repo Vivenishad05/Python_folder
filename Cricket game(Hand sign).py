@@ -21,21 +21,21 @@ import random
 
 
 print("Lets do the toss")
-toss_call = input("Chose (H) for heads/ (T) for tails: ").upper()
+toss_call = input("Chose (H) for heads/ (T) for tails: ").upper()   #Asking for the toss
 toss = ["H", "T"]
 val = random.choice(toss)
 Runs = 0
 Wickets = 0
 Balls = 0
-if val == toss_call:
+if val == toss_call:      
     print("Congratulations you won the toss")
-    option = input("Chose what you want to do first bat/bowl : ").lower()
+    option = input("Chose what you want to do first bat/bowl : ").lower()    # Asking the user to chose bat or bowl
     if option == "bat":
         print("Let's start the first innings:")
         while Wickets < 2 and Balls < 12:
             p_chose = int(input("Enter a number between 1 to 6 : "))
             c_chose=random.randint(1,6)
-            while not(1<=p_chose <=6):
+            while not(1<=p_chose <=6):         #If user inputs a invaild number from games condition
                 p_chose = int(input("Please enter a value from 1-6 \nEnter a number between 1 to 6 : "))
             print("Your choice is ", p_chose)
             print("Computers choice is ", c_chose)
